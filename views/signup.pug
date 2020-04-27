@@ -1,0 +1,18 @@
+html
+  head
+    title Login
+  body
+    h2 Login
+    form( action="/login" method="POST" )
+      p Username: 
+        input(name = "username" type = "text"  placeholder = "User ID")
+      p Password:
+        input(name = "password" type = "password"  placeholder = "Password")
+      p E-mail:
+        input(name = "email" type = "email"  placeholder = "E-mail")
+      p
+        button(type = "Submit") Salvar
+    if message
+      p
+        label( style="color:Red" )
+          #{message}

@@ -1,0 +1,23 @@
+html
+  head
+    title Login
+  body
+    h2 Login
+    form( action="/login" method="POST" )
+      p
+        input(name = "username" type = "text"  placeholder = "User ID")
+      p
+        input(name = "password" type = "password"  placeholder = "Password")
+      p
+        button(type = "Submit") Login
+    if message
+      p
+        label( style="color:Red" )
+          #{message}
+    p 
+      a( href="/users/forgot" ) Esqueceu sua senha?
+      label   |  
+      a( href="/users/signup" ) Não possui cadastro?
+
+      
+        
